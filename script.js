@@ -44,9 +44,21 @@ for (let i = colors.length - 1; i >= 0; i--) {
 
 // "My name is Maya. I'm 30 and my favorite color is purple."
 
-// 🧾 Problem 6: Modify an Object
+let person = {
+  name: "Bob",
+  age: "40",
+  favoriteColor: "red",
+};
+
+console.log(
+  `My name is ${person.name}. I'm ${person.age} and my favorite color is ${person.favoriteColor}.`
+);
+
+//🧾 Problem 6: Modify an Object
 // Add a new property hobby to the person object using dot notation.
 // Log the updated object.
+person.hobby = "swimming";
+console.log(person);
 
 // 🧾 Problem 7: Array of Objects
 // Create an array of 3 book objects. Each book should have:
@@ -61,11 +73,49 @@ for (let i = colors.length - 1; i >= 0; i--) {
 
 // "The Hobbit by J.R.R. Tolkien - 310 pages"
 
+let books = [
+  { title: "The Hobbit", author: "J.R.R. Tolkien", pages: "310" },
+  {
+    title: "Wicked",
+    author: "Gregory Maguire",
+    pages: "560",
+    isFavorite: true,
+  },
+  { title: "Twilight", author: "Stephenie Meyer", pages: "498" },
+];
+
+for (let i = 0; i < books.length; i++) {
+  let bookObject = books[i];
+  console.log(
+    `${bookObject.title} by ${bookObject.author} - ${bookObject.pages} pages`
+  );
+}
+
 // 🧾 Problem 8: Favorite Book Finder
 // Inside your array of books, add a property isFavorite: true to one of them.
 // Use a for loop to find and print only the favorite book.
+
+for (let i = 0; i < books.length; i++) {
+  let bookObject = books[i];
+  if (books[i].isFavorite === true)
+    console.log(
+      `${bookObject.title} by ${bookObject.author} - ${bookObject.pages} pages`
+    );
+}
 
 // 🧠 Bonus Challenge
 // Create a function called describePerson(obj) that takes an object with name, age, and hobby, and returns a sentence like:
 
 // "Jane is 25 years old and loves painting."
+
+let description = {
+  name: "Mary",
+  age: "20",
+  hobby: "knitting",
+};
+
+function describePerson(obj) {
+  return `${description.name} is ${description.age} and loves ${description.hobby}`;
+}
+
+console.log(describePerson());
