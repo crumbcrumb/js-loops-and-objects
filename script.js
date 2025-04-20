@@ -46,7 +46,7 @@ for (let i = colors.length - 1; i >= 0; i--) {
 
 let person = {
   name: "Bob",
-  age: "40",
+  age: 40,
   favoriteColor: "red",
 };
 
@@ -110,7 +110,7 @@ for (let i = 0; i < books.length; i++) {
 
 let description = {
   name: "Mary",
-  age: "20",
+  age: 20,
   hobby: "knitting",
 };
 
