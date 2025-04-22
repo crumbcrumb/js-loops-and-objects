@@ -115,7 +115,7 @@ let description = {
 };
 
 function describePerson(obj) {
-  return `${description.name} is ${description.age} and loves ${description.hobby}`;
+  return `${obj.name} is ${obj.age} and loves ${obj.hobby}`;
 }
 
-console.log(describePerson());
+console.log(describePerson(description));
